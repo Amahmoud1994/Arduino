@@ -11,26 +11,21 @@
 
 /*****************************************************************************/
 
-#include <SoftwareSerial.h>
-#include <SerialLCD.h>
+//#include <SoftwareSerial.h>
+//#include <SerialLCD.h>
 #include "Ultrasonic.h"
 
-SerialLCD slcd(11,12);
-Ultrasonic ultrasonic(7);
+//SerialLCD slcd(11,12);
+Ultrasonic ultrasonic(4);
 void setup()
 {
-   slcd.begin();
+   Serial.begin(9600);
 }
 void loop()
 {
         long RangeInCentimeters;
         RangeInCentimeters = ultrasonic.MeasureInCentimeters();
+        Serial.println(RangeInCentimeters);
         delay(150);
-        slcd.clear();
-        slcd.setCursor(0,0);
-        slcd.print("The distance:");
-        slcd.setCursor(0,1) ;
-        slcd.print(RangeInCentimeters,DEC);
-        slcd.setCursor(5,1) ;
-        slcd.print("cm");
+        
 }
