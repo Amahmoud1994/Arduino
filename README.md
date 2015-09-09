@@ -9,3 +9,5 @@ http://www.arduino.cc/en/Main/Products
 You can download Arduino from this link:
 
 http://www.arduino.cc/en/Main/Software
+
+You will find the Grove_Ultrasonic_Ranger library as ceprate repo (https://github.com/Amahmoud1994/Grove_Ultrasonic_Ranger)
